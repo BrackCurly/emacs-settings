@@ -23,3 +23,7 @@
 
 ;; show line numbers
 (global-linum-mode t)
+
+;; key mappings
+(global-set-key (kbd "RET") 'newline-and-indent)
+(global-set-key (kbd "C-c j") 'join-line)
