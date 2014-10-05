@@ -22,4 +22,4 @@
 (load-theme 'solarized-dark t)
 
 ;; show line numbers
-(linum-mode)
+(global-linum-mode t)
