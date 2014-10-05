@@ -8,7 +8,9 @@
 (defvar my-packages '(projectile
 		      clojure-mode
 		      cider
-		      color-theme-solarized))
+		      color-theme-solarized
+		      rainbow-delimiters
+		      rainbow-mode))
 
 (dolist (p my-packages)
   (unless (package-installed-p p)
@@ -18,6 +20,10 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
+
+;; enable delimiters highlight
+(show-paren-mode 1)
+(global-rainbow-delimiters-mode)
 
 ;; load color scheme
 (load-theme 'solarized-dark t)
