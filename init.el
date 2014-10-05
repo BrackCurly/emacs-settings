@@ -14,9 +14,10 @@
   (unless (package-installed-p p)
     (package-install p)))
 
-;; disable menu bar and tool bar
+;; disable menu bar, tool bar and scroll bar
 (menu-bar-mode -1)
 (tool-bar-mode -1)
+(scroll-bar-mode -1)
 
 ;; load color scheme
 (load-theme 'solarized-dark t)
