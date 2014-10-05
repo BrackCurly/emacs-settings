@@ -20,3 +20,6 @@
 
 ;; load color scheme
 (load-theme 'solarized-dark t)
+
+;; show line numbers
+(linum-mode)
