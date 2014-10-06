@@ -34,3 +34,6 @@
 ;; key mappings
 (global-set-key (kbd "RET") 'newline-and-indent)
 (global-set-key (kbd "C-c j") 'join-line)
+
+;; no startup msg
+(setq inhibit-startup-message t)
