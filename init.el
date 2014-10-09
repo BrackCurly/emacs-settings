@@ -37,3 +37,6 @@
 
 ;; no startup msg
 (setq inhibit-startup-message t)
+
+;; turn on automatic bracket insertion by pairs.
+(electric-pair-mode 1)
