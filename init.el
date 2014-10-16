@@ -41,3 +41,6 @@
 
 ;; turn on automatic bracket insertion by pairs.
 (electric-pair-mode 1)
+
+;; delete trailing whitespace on save
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
