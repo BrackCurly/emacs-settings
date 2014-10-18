@@ -10,7 +10,8 @@
 		      cider
 		      color-theme-solarized
 		      rainbow-delimiters
-		      rainbow-mode))
+		      rainbow-mode
+		      theme-changer))
 
 (dolist (p my-packages)
   (unless (package-installed-p p)
@@ -24,9 +25,6 @@
 ;; enable delimiters highlight
 (show-paren-mode 1)
 (global-rainbow-delimiters-mode)
-
-;; load color scheme
-(load-theme 'solarized-dark t)
 
 ;; show line numbers
 (global-linum-mode t)
@@ -44,3 +42,11 @@
 
 ;; delete trailing whitespace on save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;; setup theme changer
+(setq calendar-location-name "Stuttgart, BW")
+(setq calendar-latitude 48.7833)
+(setq calendar-longitude 9.1833)
+
+(require 'theme-changer)
+(change-theme 'solarized-light 'solarized-dark)
