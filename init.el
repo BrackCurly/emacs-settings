@@ -11,7 +11,8 @@
 		      color-theme-solarized
 		      rainbow-delimiters
 		      rainbow-mode
-		      theme-changer))
+		      theme-changer
+		      scss-mode))
 
 (dolist (p my-packages)
   (unless (package-installed-p p)
@@ -50,3 +51,6 @@
 
 (require 'theme-changer)
 (change-theme 'solarized-light 'solarized-dark)
+
+;; disable auto compile for scss
+(setq scss-compile-at-save nil)
