@@ -44,6 +44,15 @@
 ;; delete trailing whitespace on save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+;; auto indent on save
+ (defun indent-buffer ()
+      (interactive)
+      (save-excursion
+        (indent-region (point-min) (point-max) nil)))
+    (global-set-key [f12] 'indent-buffer)
+
+(add-hook 'before-save-hook 'indent-buffer)
+
 ;; setup theme changer
 (setq calendar-location-name "Stuttgart, BW")
 (setq calendar-latitude 48.7833)
