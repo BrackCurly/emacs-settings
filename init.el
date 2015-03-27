@@ -45,11 +45,11 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; auto indent on save
- (defun indent-buffer ()
-      (interactive)
-      (save-excursion
-        (indent-region (point-min) (point-max) nil)))
-    (global-set-key [f12] 'indent-buffer)
+(defun indent-buffer ()
+  (interactive)
+  (save-excursion
+    (indent-region (point-min) (point-max) nil)))
+(global-set-key [f12] 'indent-buffer)
 
 (add-hook 'before-save-hook 'indent-buffer)
 
@@ -63,3 +63,6 @@
 
 ;; disable auto compile for scss
 (setq scss-compile-at-save nil)
+
+;; fix problems with caret character
+(define-key key-translation-map [dead-circumflex] "^")
