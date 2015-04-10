@@ -66,3 +66,6 @@
 
 ;; fix problems with caret character
 (define-key key-translation-map [dead-circumflex] "^")
+
+;; indentation levels
+(setq js-indent-level 2)
