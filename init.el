@@ -7,7 +7,7 @@
 ;; install packages
 (defvar my-packages '(clojure-mode
 		      cider
-		      ))
+		      web-mode))
 
 (dolist (p my-packages)
   (unless (package-installed-p p)
@@ -21,7 +21,6 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-
 
 ;; show line numbers
 (global-linum-mode t)
@@ -53,3 +52,7 @@
 
 ;; indentation levels
 (setq js-indent-level 2)
+
+;; web mode
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx?\\'" . web-mode))
