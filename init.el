@@ -8,8 +8,6 @@
 (defvar my-packages '(clojure-mode
 		      cider
 		      color-theme-solarized
-		      rainbow-delimiters
-		      rainbow-mode
 		      theme-changer))
 
 (dolist (p my-packages)
@@ -31,8 +29,7 @@
 (global-set-key (kbd "C-c i") 'indent-region)
 
 ;; enable delimiters highlight
-;;(show-paren-mode 1)
-;;(global-rainbow-delimiters-mode)
+(show-paren-mode 1)
 
 ;; no startup msg
 (setq inhibit-startup-message t)
