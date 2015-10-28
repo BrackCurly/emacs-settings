@@ -7,18 +7,21 @@
 ;; install packages
 (defvar my-packages '(clojure-mode
 		      cider
-		      color-theme-solarized
-		      theme-changer))
+		      ))
 
 (dolist (p my-packages)
   (unless (package-installed-p p)
     (package-install p)))
 
-;; disable menu bar, tool bar, tabs and scroll bar
+;; color themes
+(add-to-list 'custom-theme-load-path "~/.emacs.d/emacs-color-theme-solarized")
+(load-theme 'solarized t)
+
+;; disable menu bar, tool bar and scroll bar
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-(tabbar-mode 0)
+
 
 ;; show line numbers
 (global-linum-mode t)
@@ -50,6 +53,3 @@
 
 ;; indentation levels
 (setq js-indent-level 2)
-
-;; color theme solarized
-(color-theme-solarized 'light)
