@@ -7,7 +7,8 @@
 ;; install packages
 (defvar my-packages '(clojure-mode
 		      cider
-		      web-mode))
+		      web-mode
+		      json-mode))
 
 (dolist (p my-packages)
   (unless (package-installed-p p)
@@ -61,3 +62,13 @@
   (setq web-mode-code-indent-offset 2))
 
 (add-hook 'web-mode-hook  'my-web-mode-hook)
+
+;; json mode
+(add-to-list 'auto-mode-alist '("\\.babelrc\\'" . json-mode))
+
+(defun my-json-mode-hook ()
+  "Hooks for json mode."
+  (setq json-reformat:indent-width 2)
+  (setq js-indent-level 2))
+
+(add-hook 'json-mode-hook  'my-json-mode-hook)
